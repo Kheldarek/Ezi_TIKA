@@ -1,15 +1,7 @@
 package lab2;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.stream.Stream;
-
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.langdetect.OptimaizeLangDetector;
-import org.apache.tika.language.detect.LanguageResult;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.TikaCoreProperties;
 import org.apache.tika.parser.AutoDetectParser;
@@ -17,6 +9,12 @@ import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Exercise2 {
 
@@ -47,7 +45,7 @@ public class Exercise2 {
 
     }
 
-    private void initLangDetector() throws IOException {
+    private void initLangDetector() {
         langDetector = new OptimaizeLangDetector();
         langDetector.loadModels();
     }
